@@ -5,7 +5,11 @@ let bankBranchInstance = ''
 // 2. Define a class called `BankBranch` for managing branch information.
 class BankBranch {
     constructor(branchInfo) {
-        
+        if (bankBranchInstance == null) {
+            this.branchInfo = branchInfo
+            bankBranchInstance = this
+        }
+        return bankBranchInstance
     }
 }
 
